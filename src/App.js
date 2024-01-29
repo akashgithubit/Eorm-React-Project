@@ -15,7 +15,6 @@ function App() {
       children: routes
     },
   ])
-
   return (
       <RouterProvider router={router} />
   )
