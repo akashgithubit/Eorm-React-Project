@@ -229,6 +229,7 @@ const AppSidebar = () => {
       </div> */}
       <CSidebarNav style={{ backgroundColor: "#353a40" }}>
         <SimpleBar style={{ backgroundColor: "#353a40" }}>
+          {console.log("navigation", navigation)}
           <AppSidebarNav items={navigation} />
         </SimpleBar>
       </CSidebarNav>
