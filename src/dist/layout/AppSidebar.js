@@ -1,25 +1,137 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+// import React from "react";
+// import { useSelector, useDispatch } from "react-redux";
 
-import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
+// import {
+//   CSidebar,
+//   CSidebarBrand,
+//   CSidebarNav,
+//   CSidebarToggler,
+// } from "@coreui/react";
 
-import CIcon from '@coreui/icons-react'
+// import CIcon from "@coreui/icons-react";
+// import isysLogo from "../../assets/images/isyslogo.png";
 
-import { AppSidebarNav } from './AppSidebarNav'
+// import { AppSidebarNav } from "./AppSidebarNav";
 
-import { logoNegative } from '../../assets/brand/logo-negative'
-import { sygnet } from '../../assets/brand/sygnet'
+// import { logoNegative } from "../../assets/brand/logo-negative";
+// import { sygnet } from "../../assets/brand/sygnet";
 
-import SimpleBar from 'simplebar-react'
-//import 'simplebar/dist/simplebar.min.css'
+// import SimpleBar from "simplebar-react";
+// //import 'simplebar/dist/simplebar.min.css'
+
+// // sidebar nav config
+// import navigation from "./_nav";
+
+// const AppSidebar = () => {
+//   const dispatch = useDispatch();
+//   const unfoldable = useSelector((state) => state.sidebarUnfoldable);
+//   const sidebarShow = useSelector((state) => state.sidebarShow);
+
+//   return (
+//     // <CSidebar
+//     //   position="fixed"
+//     //   unfoldable={unfoldable}
+//     //   visible={sidebarShow}
+//     //   onVisibleChange={(visible) => {
+//     //     dispatch({ type: "set", sidebarShow: visible });
+//     //   }}
+//     // >
+//     //   {/* <CSidebarBrand
+//     //     className="d-none d-md-flex"
+//     //     to="/"
+//     //     style={{ backgroundColor: "#353a40" }}
+//     //   >
+//     //     <h1>ISYS</h1> */}
+//     //   {/* <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} /> */}
+//     //   {/* </CSidebarBrand> */}
+//     //   {/* <div className="text-center" style={{ backgroundColor: '#353a40', padding: '5% 0' }}>
+//     //     <img
+//     //       style={{ width: 'auto', height: '60px' }}
+//     //       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/ZDF_logo%21_Logo_2021.svg/768px-ZDF_logo%21_Logo_2021.svg.png?20211204213142"
+//     //       className="rounded"
+//     //       alt="logo"
+//     //     />
+//     //   </div> */}
+//     //   {/* <CSidebarNav style={{ backgroundColor: "#353a40" }}>
+//     //     <SimpleBar style={{ backgroundColor: "#353a40" }}>
+//     //       <AppSidebarNav items={navigation} />
+//     //     </SimpleBar>
+//     //   </CSidebarNav> */}
+//     //   {/* <CSidebarToggler
+//     //     style={{ backgroundColor: '#353a40' }}
+//     //     className="d-none d-lg-flex"
+//     //     onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
+//     //   /> */}
+//     // </CSidebar>
+//     <CSidebar
+//       position="fixed"
+//       unfoldable={unfoldable}
+//       visible={sidebarShow}
+//       onVisibleChange={(visible) => {
+//         dispatch({ type: "set", sidebarShow: visible });
+//       }}
+//     >
+//       <CSidebarBrand
+//         className="d-none d-md-flex"
+//         to="/"
+//         style={{ backgroundColor: "#353a40" }}
+//       >
+//         <img src={isysLogo} width={100}></img>
+//         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+//       </CSidebarBrand>
+//       {/* <div className="text-center" style={{ backgroundColor: '#353a40', padding: '5% 0' }}>
+//         <img
+//           style={{ width: 'auto', height: '60px' }}
+//           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/ZDF_logo%21_Logo_2021.svg/768px-ZDF_logo%21_Logo_2021.svg.png?20211204213142"
+//           className="rounded"
+//           alt="logo"
+//         />
+//       </div> */}
+//       <CSidebarNav style={{ backgroundColor: "#353a40" }}>
+//         <SimpleBar style={{ backgroundColor: "#353a40" }}>
+//           <AppSidebarNav items={navigation} />
+//         </SimpleBar>
+//       </CSidebarNav>
+//       {/* <CSidebarToggler
+//         style={{ backgroundColor: '#353a40' }}
+//         className="d-none d-lg-flex"
+//         onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
+//       /> */}
+//     </CSidebar>
+//   );
+// };
+
+// export default React.memo(AppSidebar);
+
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  CSidebar,
+  CSidebarBrand,
+  CSidebarNav,
+  CSidebarToggler,
+} from "@coreui/react";
+
+import CIcon from "@coreui/icons-react";
+
+import { AppSidebarNav } from "./AppSidebarNav";
+
+//import { logoNegative } from "src/assets/brand/logo-negative";
+// import { sygnet } from "src/assets/brand/sygnet";
+import { sygnet } from "../../assets/brand/sygnet";
+// import isysLogo from "../assets/images/isyslogo.png";
+import isysLogo from "../../assets/images/isyslogo.png";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 
 // sidebar nav config
-import navigation from './_nav'
+// import navigation from "../_nav";
 
 const AppSidebar = () => {
-  const dispatch = useDispatch()
-  const unfoldable = useSelector((state) => state.sidebarUnfoldable)
-  const sidebarShow = useSelector((state) => state.sidebarShow)
+  const dispatch = useDispatch();
+  const unfoldable = useSelector((state) => state.sidebarUnfoldable);
+  const sidebarShow = useSelector((state) => state.sidebarShow);
 
   return (
     <CSidebar
@@ -27,12 +139,16 @@ const AppSidebar = () => {
       unfoldable={unfoldable}
       visible={sidebarShow}
       onVisibleChange={(visible) => {
-        dispatch({ type: 'set', sidebarShow: visible })
+        dispatch({ type: "set", sidebarShow: visible });
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/" style={{ backgroundColor: '#353a40' }}>
-        <h1>ISYS</h1>
-      <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+      <CSidebarBrand
+        className="d-none d-md-flex"
+        to="/"
+        style={{ backgroundColor: "#353a40" }}
+      >
+        <img src={isysLogo} width={100}></img>
+        <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
       </CSidebarBrand>
       {/* <div className="text-center" style={{ backgroundColor: '#353a40', padding: '5% 0' }}>
         <img
@@ -42,9 +158,9 @@ const AppSidebar = () => {
           alt="logo"
         />
       </div> */}
-      <CSidebarNav style={{ backgroundColor: '#353a40' }}>
-        <SimpleBar style={{ backgroundColor: '#353a40' }}>
-          <AppSidebarNav items={navigation}/>
+      <CSidebarNav style={{ backgroundColor: "#353a40" }}>
+        <SimpleBar style={{ backgroundColor: "#353a40" }}>
+          {/* <AppSidebarNav items={navigation} /> */}
         </SimpleBar>
       </CSidebarNav>
       {/* <CSidebarToggler
@@ -53,7 +169,7 @@ const AppSidebar = () => {
         onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
       /> */}
     </CSidebar>
-  )
-}
+  );
+};
 
-export default React.memo(AppSidebar)
+export default React.memo(AppSidebar);
