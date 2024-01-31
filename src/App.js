@@ -1,25 +1,20 @@
-import "./App.css"
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom"
-import routes from "./routes"
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import routes from "./routes";
 //import Layout from "./pages/Layout"
-import Page404 from "./pages/Page404"
-import DefaultLayout from "./dist/layout/DefaultLayout"
-
+import Page404 from "./pages/Page404";
+import DefaultLayout from "./dist/layout/DefaultLayout";
+import "./dist/styles/scss/style.scss";
 function App() {
   const router = createBrowserRouter([
     {
       element: <DefaultLayout />,
       errorElement: <Page404 />,
-      children: routes
+      children: routes,
     },
-  ])
+  ]);
 
-  return (
-      <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
