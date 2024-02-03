@@ -5,6 +5,7 @@ import routes from "./routes";
 import Page404 from "./pages/Page404";
 import DefaultLayout from "./dist/layout/DefaultLayout";
 import "./dist/styles/scss/style.scss";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -14,7 +15,12 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
+    </>
+  );
 }
 
 export default App;
