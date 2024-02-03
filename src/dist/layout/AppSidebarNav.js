@@ -5,15 +5,13 @@ import PropTypes from "prop-types";
 import { CBadge } from "@coreui/react";
 
 export const AppSidebarNav = ({ items }) => {
-  console.log("itemsitems", items);
   const location = useLocation();
   const navLink = (name, icon, badge) => {
     return (
       <>
-        {console.log("name", name)}
         {icon && icon}
         {name && name}
-        {console.log("badgebadge", badge)}
+
         {badge && (
           <CBadge color={badge.color} className="ms-auto">
             {badge.text}
