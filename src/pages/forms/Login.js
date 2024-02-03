@@ -160,7 +160,7 @@ function Login({ handleClose }) {
                 style={{ borderRadius: "1rem", maxWidth: "500px" }}
               >
                 <MDBCardBody className="p-5 w-100 d-flex flex-column">
-                  <h2 className="login-box-msg">Lgin In</h2>
+                  <h2 className="login-box-msg">Login In</h2>
                   <p className="text-white-50 mb-3">
                     Please enter your login and password!
                   </p>
