@@ -1,7 +1,7 @@
 import React from "react";
 
 const Login = React.lazy(() => import("./pages/forms/Login"));
-const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Dashboard = React.lazy(() => import("./pages/Dashboard/Dashboard"));
 const Profilepage = React.lazy(() => import("./pages/forms/Profilepage"));
 
 // Icons
