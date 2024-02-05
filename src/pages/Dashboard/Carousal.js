@@ -8,18 +8,17 @@ import CalenderViewTwo from './CalenderViewTwo'
 import CalendarView from './CalendarView'
 function DarkVariantExample() {
   return (
-    <CContainer>
+    
      
         <CRow>
          <CCol sm={8}>
-
             <Carousel data-bs-theme="dark">
             <Carousel.Item>
                 <img
-                className="d-block w-100"
+                className="w-100 mx-auto"
                 src={carousal1}
                 alt="First slide"
-                style={{ height: '300px' }} // Adjust the height here
+                style={{ height: '320px' }} // Adjust the height here
                 />
             </Carousel.Item>
             <Carousel.Item>
@@ -27,7 +26,7 @@ function DarkVariantExample() {
                 className="d-block w-100"
                 src={carousal2}
                 alt="Second slide"
-                style={{ height: '300px' }} // Adjust the height here
+                style={{ height: '320px' }} // Adjust the height here
                 />
             </Carousel.Item>
             <Carousel.Item>
@@ -35,7 +34,7 @@ function DarkVariantExample() {
                 className="d-block w-100"
                 src={carousal3}
                 alt="Third slide"
-                style={{ height: '300px' }} // Adjust the height here
+                style={{ height: '320px' }} // Adjust the height here
                 />
             </Carousel.Item>
             </Carousel>
@@ -47,7 +46,7 @@ function DarkVariantExample() {
           </CCol>
          </CRow>
        
-    </CContainer>
+   
   );
 }
 

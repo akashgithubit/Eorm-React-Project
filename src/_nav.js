@@ -72,48 +72,33 @@ const _nav = [
       text: "NEW",
     },
   },
-  // {
-  //   component: CNavItem,
-  //   name: 'Role Link Access',
-  //   to: '/accessControl/RoleLinkAccess',
-  // },
-  // {
-  //         component: CNavItem,
-  //         name: 'Access Items',
-  //         to: '/masters/accessitems',
-
-  //       },
-  // {
-  //   component: CNavItem,
-  //   name: 'Access Items',
-  //   to: '/masters/accessitems',
-
-  // },
-  // {
-  //   component: CNavItem,
-  //   name: 'Role Link Access',
-  //   to: '/accessControl/RoleLinkAccess',
-
-  // },
-  // {
-  //   component: CNavItem,
-  //   name: 'Role Action Access',
-  //   to: '/accessControl/RoleActionAccess',
-  // },
-  // {
-  //   component: CNavItem,
-  //   name: 'Main Page',
-  //   to: '/mainpage',
-  //   icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-  // },
-
-  // {
-  //   component: CNavTitle,
-  //   name: 'Menu',
-  // },
-
-  //accessFunctionNew('Company', 'create') || accessFunctionNew('Department', 'create') || accessFunctionNew('Designation', 'create') ?
-  // accessFunctionNew('Department', 'create') ?
+  {
+    component: CNavGroup,
+    name: 'Resourse Management',
+    icon: <FaUsers className="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Employee Form',
+        to: '/resource/EmployeeForm',
+      },
+      {
+        component: CNavItem,
+        name: 'Designation',
+        to: '/resourse/designation',
+      },
+      {
+        component: CNavItem,
+        name: 'Department',
+        to: '/resourse/department',
+      },
+      {
+        component: CNavItem,
+        name: 'Search Employee',
+        to: '/resourse/searchEmployee',
+      },
+    ]
+  },
 ];
 const showAllNav = [
   {
@@ -128,295 +113,70 @@ const showAllNav = [
   },
   {
     component: CNavGroup,
-    name: "Masters",
-    to: "/masters",
-    icon: <RiUserSettingsFill className="nav-icon" />,
-    items: [
-      // {
-      //   component: CNavItem,
-      //   name: accessFunctionNew('Company', 'create') ? 'Company Form' : '',
-      //   to:  accessFunctionNew("Company", "create") ? '/forms/company-form' : '',
-      //   icon: accessFunctionNew("Company", "create") ? <BsBuilding className="nav-icon" /> : '',
-      // },
-      {
-        component: CNavItem,
-        name: "Company Group",
-        to: "/masters/companyGroup",
-      },
-      {
-        component: CNavItem,
-        name: "Company",
-        to: "/masters/company",
-      },
-      {
-        component: CNavItem,
-        name: "Application",
-        to: "/masters/application",
-      },
-
-      // {
-      //   component: CNavItem,
-      //   name: 'Device',
-      //   to: '/masters/Device',
-
-      // },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "User Management",
-    to: "/masters",
-    icon: <RiUserSettingsFill className="nav-icon" />,
-    items: [
-      // {
-      //   component: CNavItem,
-      //   name: accessFunctionNew('Company', 'create') ? 'Company Form' : '',
-      //   to:  accessFunctionNew("Company", "create") ? '/forms/company-form' : '',
-      //   icon: accessFunctionNew("Company", "create") ? <BsBuilding className="nav-icon" /> : '',
-      // },
-      {
-        component: CNavItem,
-        name: "Role",
-        to: "/userManagement/role",
-      },
-      {
-        component: CNavItem,
-        name: "User Registration",
-        to: "/userManagement/userForm",
-      },
-      {
-        component: CNavItem,
-        name: "Search User",
-        to: "/userManagement/searchUser",
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Access Control",
-    icon: <FaFileContract className="nav-icon" />,
+    name: 'Resourse Management',
+    icon: <FaUsers className="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: "Company Application Mapping",
-        to: "/accessControl/CompanyApplicationAccess",
+        name: 'Employee Form',
+        to: '/resource/EmployeeForm',
       },
       {
         component: CNavItem,
-        name: "Access Items",
-        to: "/masters/accessitems",
+        name: 'Designation',
+        to: '/resourse/designation',
       },
       {
         component: CNavItem,
-        name: "Role Link Access",
-        to: "/accessControl/RoleLinkAccess",
+        name: 'Department',
+        to: '/resourse/department',
       },
       {
         component: CNavItem,
-        name: "Role Action Access",
-        to: "/accessControl/RoleActionAccess",
+        name: 'Search Employee',
+        to: '/resourse/searchEmployee',
       },
-    ],
+    ]
   },
 ];
 const listNav = [
   {
-    component: CNavGroup,
-    name: "Masters",
-    to: "/masters",
-    icon: <RiUserSettingsFill className="nav-icon" />,
-    items: [
-      // {
-      //   component: CNavItem,
-      //   name: accessFunctionNew('Company', 'create') ? 'Company Form' : '',
-      //   to:  accessFunctionNew("Company", "create") ? '/forms/company-form' : '',
-      //   icon: accessFunctionNew("Company", "create") ? <BsBuilding className="nav-icon" /> : '',
-      // },
-      {
-        component: CNavItem,
-        name: "Company Group",
-        to: "/masters/companyGroup",
-      },
-      {
-        component: CNavItem,
-        name: "Company",
-        to: "/masters/company",
-      },
-      {
-        component: CNavItem,
-        name: "Application",
-        to: "/masters/application",
-      },
-
-      // {
-      //   component: CNavItem,
-      //   name: 'Device',
-      //   to: '/masters/Device',
-
-      // },
-    ],
+    component: CNavItem,
+    name: "Dashboard",
+    to: "/dashboard",
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    badge: {
+      color: "info",
+      text: "NEW",
+    },
   },
   {
     component: CNavGroup,
-    name: "User Management",
-    to: "/masters",
-    icon: <RiUserSettingsFill className="nav-icon" />,
-    items: [
-      // {
-      //   component: CNavItem,
-      //   name: accessFunctionNew('Company', 'create') ? 'Company Form' : '',
-      //   to:  accessFunctionNew("Company", "create") ? '/forms/company-form' : '',
-      //   icon: accessFunctionNew("Company", "create") ? <BsBuilding className="nav-icon" /> : '',
-      // },
-      {
-        component: CNavItem,
-        name: "Role",
-        to: "/userManagement/role",
-      },
-      {
-        component: CNavItem,
-        name: "User Registration",
-        to: "/userManagement/userForm",
-      },
-      {
-        component: CNavItem,
-        name: "Search User",
-        to: "/userManagement/searchUser",
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Access Control",
-    icon: <FaFileContract className="nav-icon" />,
+    name: 'Resourse Management',
+    icon: <FaUsers className="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: "Company Application Mapping",
-        to: "/accessControl/CompanyApplicationAccess",
+        name: 'Employee Form',
+        to: '/resource/EmployeeForm',
       },
       {
         component: CNavItem,
-        name: "Access Items",
-        to: "/masters/accessitems",
+        name: 'Designation',
+        to: '/resourse/designation',
       },
       {
         component: CNavItem,
-        name: "Role Link Access",
-        to: "/accessControl/RoleLinkAccess",
+        name: 'Department',
+        to: '/resourse/department',
       },
       {
         component: CNavItem,
-        name: "Role Action Access",
-        to: "/accessControl/RoleActionAccess",
+        name: 'Search Employee',
+        to: '/resourse/searchEmployee',
       },
-    ],
+    ]
   },
-  // {
-  //   component: CNavGroup,
-  //   name: 'Resourse Management',
-  //   icon: <FaUsers className="nav-icon" />,
-  //   items: [
-  //     {
-  //       component: CNavItem,
-  //       name: 'Employee Form',
-  //       to: '/resource/EmployeeForm',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Designation',
-  //       to: '/resourse/designation',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Department',
-  //       to: '/resourse/department',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Search Employee',
-  //       to: '/resourse/searchEmployee',
-  //     },
-  //   ]
-  // },
-
-  //   {
-  //     component: CNavGroup,
-  //     name: 'Leave',
-  //     icon: <FaFileContract className="nav-icon" />,
-  //     items: [
-  //       {
-  //         component: CNavItem,
-  //         name: 'Leave Limit',
-  //         to: '/leave/LeaveLimit',
-
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     component: CNavGroup,
-  //     name: 'Shift',
-  //     icon: <FaUsers className="nav-icon" />,
-  //     items: [
-
-  //       {
-  //         component: CNavItem,
-  //         name: 'Shift Form',
-  //         to: '/shift/ShiftForm',
-
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     component: CNavGroup,
-  //     name: 'Contract',
-  //     icon: <RiFileEditFill className="nav-icon" />,
-  //     items: [
-  //       {
-  //         component: CNavItem,
-  //         name: 'Create Contract',
-  //         to: '/contract/ContractForm',
-
-  //       },
-  //       {
-  //         component: CNavItem,
-  //         name: 'Module Form',
-  //         to: '/contract/ModuleForm',
-
-  //       },
-  //       {
-  //         component: CNavItem,
-  //         name: 'Requirement Form',
-  //         to: '/contract/RequirementForm',
-
-  //       },
-  //     ]
-  //   },
-  // {
-  //   component: CNavGroup,
-  //   name: 'Employee Management',
-  //   icon: <FaUsers className="nav-icon" />,
-  //   items: [
-  //     {
-  //       component: CNavItem,
-  //       name: 'Employee Form',
-  //       to: '/resource/EmployeeForm',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Designation',
-  //       to: '/resourse/designation',
-
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Department',
-  //       to: '/resourse/department',
-
-  //     }
-
-  //   ]
-  // }
 ];
 
 const isParentExist = (name) => {

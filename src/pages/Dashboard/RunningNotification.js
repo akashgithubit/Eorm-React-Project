@@ -2,21 +2,17 @@ import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import {
   CRow,
-  CCol,
-  CModal,
-  CModalFooter,
-  CModalHeader,
-  CModalTitle,
-  CModalBody,
-  CButton,
-  CContainer,
+  CCol
 } from '@coreui/react'
+
 import styles from '../../dist/styles/DashboardStyles/DashboardStyles.module.css';
 import setStyle from '../../dist/styles/css/form-style.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-free/css/all.css";
 const RunningNotifications = () => {
-  const [apiData, setApiData] = useState([''])
-  const [visible, setVisible] = useState(false)
-  const [specificIdData, setSpecificIdData] = useState({})
+  const Bell = <FontAwesomeIcon icon={faBell} />;
+
 
   // const notificationAPiCall = async () => {
   //   try {
@@ -54,30 +50,48 @@ const RunningNotifications = () => {
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  const notifications = {
+    "runningNotification": ["Annual Day Event held on Feb 12 2024"],
+    "notification": [
+      {
+        id: 1,
+        notification: "It's a Time to Update Your TimeSheet"
+      },
+      {
+        id: 2,
+        notification: "Pending Tickets has be close on 20th Feb"
+      },
+      {
+        id: 3,
+        notification: "From Tomorrow Scrum will be at 10:00 AM"
+      },
+      {
+        id: 3,
+        notification: "Java Team Shift Changes to 2:00PM-8:00PM"
+      }
+    ]
+  };
   
   return (
     <>
-    <label className={styles.empheader}>To Do List</label>
-    <div className={styles.scrollContainer}>
-      <CModal 
-        visible={visible} 
-        onClose={() => (setVisible(false))}
-       >
-        <CModalHeader>
-        <CModalTitle>
-          {specificIdData && specificIdData.name ? specificIdData.name.toUpperCase() : ''}
-        </CModalTitle>
-        </CModalHeader>
-        <CModalBody>
-          <p style={{fontSize: '25px'}}>{specificIdData.description}</p>
-        </CModalBody>
-        <CModalFooter>
-          <CButton color="info" onClick={() => (setVisible(false))}>
-            OK
-          </CButton>
-        </CModalFooter>
-      </CModal>
-    </div>
+     <label className={styles.dashboardsubheader}>Notification</label>
+
+     <div className={styles.marqueeContainer}>
+          {notifications.runningNotification.map((item, index) => (
+            <div key={index}>
+              <div className={styles.marqueeContent}>
+              <sup style={{color:"orange",fontSize:"18px",fontWeight:600}}>{Bell}</sup>{item}
+              </div>
+           </div>
+          ))}
+      </div>
+      <div style={{ padding: "12px" }}>
+        {notifications.notification.map((item, index) => (
+          <div  className={styles.notificationItem}>
+              <li className={styles.notificationcss}>{item.notification}</li>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

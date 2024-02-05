@@ -10,7 +10,6 @@ import "reactjs-popup/dist/index.css";
 import Login from "../../pages/forms/Login";
 // import Dashboard from "../../pages/Dashboard";
 import Dashboard from "../../pages/Dashboard/Dashboard";
-
 // routes config
 import routes from "../../routes";
 

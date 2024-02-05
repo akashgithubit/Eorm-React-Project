@@ -56,7 +56,7 @@ const CalenderViewTwo = () => {
   },[])
   const simplifiedHolidayArray = values.map(({ holidayName, date }) => ({ holidayName, date:new Date(date).toISOString().split('T')[0], }));
 
- console.log("simp val....",simplifiedHolidayArray)
+  console.log("simp val....",simplifiedHolidayArray)
 
  
   const handleSelect = ({ start, end }) => {
@@ -103,7 +103,6 @@ const CalenderViewTwo = () => {
     };
   };
   
-
   const isWeekend = date => {
     const day = date.getDay();
     return day === 0 || day === 6;

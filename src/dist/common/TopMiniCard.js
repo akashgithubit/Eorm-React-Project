@@ -12,6 +12,7 @@ import {
 import styles from "../../dist/styles/DashboardStyles/DashboardStyles.module.css";
 import RunningNotifications from "../../pages/Dashboard/RunningNotification";
 import { FaBalanceScale, FaChartLine, FaSlack, FaOpenid } from "react-icons/fa";
+import PolicyLinks from "../../pages/Dashboard/PolicyLinks";
 const TopMiniCard = (val) => {
   const [values, setValues] = useState([]);
 
@@ -88,52 +89,8 @@ const TopMiniCard = (val) => {
             </CCol>
           </CRow>
           <br></br>
-          <CRow>
-            <CCol sm={12}>
-              <label className={styles.empheader}>Policy Links</label>
-              <CCard className={styles.policystyle}>
-                <CCardBody>
-                  <CRow>
-                    <CCol sm={3}>
-                      <CCardTitle
-                        className={`${styles.empSubHeader} ${styles.cardTitle}`}
-                      >
-                        Attendance And Leave Policies
-                      </CCardTitle>
-
-                      <CCardLink href="#">Card link</CCardLink>
-                    </CCol>
-                    <CCol sm={3}>
-                      <CCardTitle
-                        className={`${styles.empSubHeader} ${styles.cardTitle}`}
-                      >
-                        Security Policies
-                      </CCardTitle>
-
-                      <CCardLink href="#">Card link</CCardLink>
-                    </CCol>
-                    <CCol sm={3}>
-                      <CCardTitle
-                        className={`${styles.empSubHeader} ${styles.cardTitle}`}
-                      >
-                        Releaving Policies
-                      </CCardTitle>
-
-                      <CCardLink href="#">Card link</CCardLink>
-                    </CCol>
-                    <CCol sm={3}>
-                      <CCardTitle
-                        className={`${styles.empSubHeader} ${styles.cardTitle}`}
-                      >
-                        Onboarding Policies
-                      </CCardTitle>
-
-                      <CCardLink href="#">Card link</CCardLink>
-                    </CCol>
-                  </CRow>
-                </CCardBody>
-              </CCard>
-            </CCol>
+          <CRow sm={12} >
+            <PolicyLinks />
           </CRow>
         </CCol>
         <CCol sm={4}>
