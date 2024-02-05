@@ -8,7 +8,8 @@ import { redirect } from "react-router-dom";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import Login from "../../pages/forms/Login";
-import Dashboard from "../../pages/Dashboard";
+// import Dashboard from "../../pages/Dashboard";
+import Dashboard from "../../pages/Dashboard/Dashboard";
 
 // routes config
 import routes from "../../routes";
@@ -21,11 +22,9 @@ const AppContent = () => {
 
   return (
     <CContainer lg>
-      {console.log("token", token)}
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
           {routes.map((route, idx) => {
-            console.log("route.elementroute.element", route);
             return (
               route.element && (
                 <Route
