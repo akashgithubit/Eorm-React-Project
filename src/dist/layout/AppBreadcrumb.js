@@ -63,7 +63,7 @@ const AppBreadcrumb = () => {
           );
         })}
       </CBreadcrumb>
-      {token && <CButton onClick={() => Logout()}>Logout</CButton>}
+      {/* {token && <CButton onClick={() => Logout()}>Logout</CButton>} */}
       {/* <NavLink to={path.path}>Login</NavLink> */}
     </>
   );
