@@ -249,12 +249,52 @@ const AppHeaderDropdown = () => {
             caret={false}
           >
             <div style={{ display: "flex", alignItems: "center" }}>
-              <CBreadcrumbItem
+              {/* <CBreadcrumbItem
                 onClick={checkRole}
                 style={{ marginRight: "10px" }}
               >
                 {renderedAvatars}
-              </CBreadcrumbItem>
+              </CBreadcrumbItem> */}
+              <CTooltip content="ADMS">
+              <span
+                style={{
+                  color: "grey",
+                  marginRight: "20px",
+                  fontSize: "26px",
+                  cursor: "pointer",
+                }}
+                //onClick={() => checkRole(app)}
+              >
+                {AdmsIcon}
+              </span>
+            </CTooltip>
+            <CTooltip content="SALE">
+              <span
+                style={{
+                  color: "grey",
+                  marginRight: "20px",
+                  fontSize: "26px",
+                  cursor: "pointer",
+                }}
+                //onClick={() => checkRole(app)}
+              >
+                {SaleIcon}
+              </span>
+            </CTooltip>
+            <CTooltip content="TIAT">
+              <span
+                style={{
+                  color: "grey",
+                  marginRight: "20px",
+                  fontSize: "26px",
+                  cursor: "pointer",
+                }}
+                //onClick={() => checkRole(app)}
+              >
+                {TiatIcon}
+              </span>
+            </CTooltip>
+         
               <CAvatar src={avatar8} size="md" />
             </div>
           </CDropdownToggle>
