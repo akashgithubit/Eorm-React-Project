@@ -2,8 +2,9 @@ import React, { useState,useEffect } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import Constants from '../../../src/constants/Constants';
+import Constants from '../../constants/Constants';
 import { json } from 'react-router-dom';
+import styles from '../../dist/styles/DashboardStyles/DashboardStyles.module.css';
 
 const localizer = momentLocalizer(moment);
 
@@ -153,7 +154,7 @@ const CalenderViewTwo = () => {
   };
 
   return (
-    <div style={{ height: '24vh' }}>
+    <div style={{ height: '320px'}}>
       <Calendar
         selectable
         localizer={localizer}
@@ -165,6 +166,7 @@ const CalenderViewTwo = () => {
         onSelectEvent={event => alert(event.title)}
         eventPropGetter={eventStyleGetter}
         dayPropGetter={dayPropGetter}
+        // className={styles.Calendar}
       />
       
     </div>

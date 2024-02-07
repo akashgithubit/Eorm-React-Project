@@ -8,8 +8,6 @@ import CalenderViewTwo from './CalenderViewTwo'
 import CalendarView from './CalendarView'
 function DarkVariantExample() {
   return (
-    
-     
         <CRow>
          <CCol sm={8}>
             <Carousel data-bs-theme="dark">
@@ -38,15 +36,11 @@ function DarkVariantExample() {
                 />
             </Carousel.Item>
             </Carousel>
-         
-      
           </CCol>
           <CCol sm={4}>
-              <CalendarView/>
+              <CalenderViewTwo/>
           </CCol>
          </CRow>
-       
-   
   );
 }
 

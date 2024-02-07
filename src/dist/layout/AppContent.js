@@ -9,7 +9,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import Login from "../../pages/forms/Login";
 // import Dashboard from "../../pages/Dashboard";
-import Dashboard from "../../pages/Dashboard/Dashboard";
+import Dashboard from "../../pages/dashboard/Dashboard";
 // routes config
 import routes from "../../routes";
 

@@ -10,9 +10,9 @@ import {
   CCol,
 } from "@coreui/react";
 import styles from "../../dist/styles/DashboardStyles/DashboardStyles.module.css";
-import RunningNotifications from "../../pages/Dashboard/RunningNotification";
+import RunningNotifications from "../../pages/dashboard/RunningNotification";
 import { FaBalanceScale, FaChartLine, FaSlack, FaOpenid } from "react-icons/fa";
-import PolicyLinks from "../../pages/Dashboard/PolicyLinks";
+import PolicyLinks from "../../pages/dashboard/PolicyLinks";
 const TopMiniCard = (val) => {
   const [values, setValues] = useState([]);
 

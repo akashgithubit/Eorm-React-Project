@@ -69,7 +69,7 @@ const PolicyLinks = () => {
                     <CCol sm={3} style={{borderRight:"solid 1px grey"}}> 
                       <CCardLink href="#">Relieving</CCardLink>
                     </CCol>
-                    <CCol sm={3} style={{borderRight:"solid 1px grey"}}>
+                    <CCol sm={3}>
                       <CCardLink href="#">OnBoarding</CCardLink>
                     </CCol>
                   </CRow>

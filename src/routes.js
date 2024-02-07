@@ -1,15 +1,13 @@
 import React from "react";
 
 const Login = React.lazy(() => import("./pages/forms/Login"));
-const Dashboard = React.lazy(() => import("./pages/Dashboard/Dashboard"));
+const Dashboard = React.lazy(() => import("./pages/dashboard/Dashboard"));
 const Profilepage = React.lazy(() => import("./pages/forms/Profilepage"));
 
 // Icons
-const CoreUIIcons = React.lazy(() =>
-  import("./dist/icons/coreui-icons/CoreUIIcons")
-);
-const Flags = React.lazy(() => import("./dist/icons/flags/Flags"));
-const Brands = React.lazy(() => import("./dist/icons/brands/Brands"));
+const CoreUIIcons = React.lazy(() =>import("./dist/icons/CoreUIIcons"));
+const Flags = React.lazy(() => import("./dist/icons/Flags"));
+const Brands = React.lazy(() => import("./dist/icons/Brands"));
 
 const routes = [
   { path: "/", exact: true, name: "Dashboard", element: Dashboard },
