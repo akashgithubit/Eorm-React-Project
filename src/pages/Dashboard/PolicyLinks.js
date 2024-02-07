@@ -54,22 +54,22 @@ const PolicyLinks = () => {
   return (
     <>
   
-     <CCol sm={12}>
+           <CCol sm={12}>
               <label className={styles.dashboardsubheader}>Policy and Other Links</label>
               <CCard style={{borderTop:"solid 5px #00BFFF"}} className={styles.policystyle}>
                 <CCardBody>
                   <CRow>
-                    <CCol sm={3}>
+                    <CCol sm={3} style={{borderRight:"solid 1px grey"}}>
                       <CCardLink href="#">Attendance And Leave</CCardLink>
                     </CCol>
-                    <CCol sm={3}>
+                    <CCol sm={3} style={{borderRight:"solid 1px grey"}}>
                 
                       <CCardLink href="#">Security</CCardLink>
                     </CCol>
-                    <CCol sm={3}> 
+                    <CCol sm={3} style={{borderRight:"solid 1px grey"}}> 
                       <CCardLink href="#">Relieving</CCardLink>
                     </CCol>
-                    <CCol sm={3}>
+                    <CCol sm={3} style={{borderRight:"solid 1px grey"}}>
                       <CCardLink href="#">OnBoarding</CCardLink>
                     </CCol>
                   </CRow>

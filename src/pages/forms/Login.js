@@ -164,7 +164,6 @@ function Login({ handleClose }) {
                   <p className="text-white-50 mb-3">
                     Please enter your login and password!
                   </p>
-
                   <MDBInput
                     wrapperClass="mb-4 w-100"
                     value={loginData.email}

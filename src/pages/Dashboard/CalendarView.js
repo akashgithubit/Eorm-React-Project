@@ -2,11 +2,9 @@ import React, { useState,useEffect } from "react";
 import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import styles from '../../dist/styles/DashboardStyles/DashboardStyles.module.css';
-import { momentLocalizer } from 'react-big-calendar';
+
 import moment from 'moment';
 import Constants from '../../constants/Constants';
-const localizer = momentLocalizer(moment);
-
 
 const data = {
 
@@ -159,7 +157,6 @@ function CalenderViewTwo() {
       //  onChange={onChange} 
       //  value={value} 
        selectable
-       localizer={localizer}
        events={events}
        defaultView="month"
        scrollToTime={new Date(1970, 1, 1, 6)}

@@ -65,7 +65,7 @@ const _nav = [
   {
     component: CNavItem,
     name: "Dashboard",
-    to: "/dashboard",
+    to: "/",
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: "info",
@@ -74,7 +74,30 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Resourse Management',
+    name: 'Organisation Structure',
+    icon: <FaBusinessTime className="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Branch',
+        to: '/resource/EmployeeForm',
+      },
+      {
+        component: CNavItem,
+        name: 'Department',
+        to: '/resourse/designation',
+      },
+      {
+        component: CNavItem,
+        name: 'Designation',
+        to: '/resourse/department',
+      },
+     
+    ]
+  },
+  {
+    component: CNavGroup,
+    name: 'Employee Management',
     icon: <FaUsers className="nav-icon" />,
     items: [
       {
@@ -84,19 +107,9 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'Designation',
+        name: 'Searh Employee',
         to: '/resourse/designation',
-      },
-      {
-        component: CNavItem,
-        name: 'Department',
-        to: '/resourse/department',
-      },
-      {
-        component: CNavItem,
-        name: 'Search Employee',
-        to: '/resourse/searchEmployee',
-      },
+      },     
     ]
   },
 ];
@@ -104,7 +117,7 @@ const showAllNav = [
   {
     component: CNavItem,
     name: "Dashboard",
-    to: "/dashboard",
+    to: "/",
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: "info",
@@ -113,7 +126,30 @@ const showAllNav = [
   },
   {
     component: CNavGroup,
-    name: 'Resourse Management',
+    name: 'Organisation Structure',
+    icon: <FaBusinessTime className="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Branch',
+        to: '/resource/EmployeeForm',
+      },
+      {
+        component: CNavItem,
+        name: 'Department',
+        to: '/resourse/designation',
+      },
+      {
+        component: CNavItem,
+        name: 'Designation',
+        to: '/resourse/department',
+      },
+     
+    ]
+  },
+  {
+    component: CNavGroup,
+    name: 'Employee Management',
     icon: <FaUsers className="nav-icon" />,
     items: [
       {
@@ -123,19 +159,9 @@ const showAllNav = [
       },
       {
         component: CNavItem,
-        name: 'Designation',
+        name: 'Searh Employee',
         to: '/resourse/designation',
-      },
-      {
-        component: CNavItem,
-        name: 'Department',
-        to: '/resourse/department',
-      },
-      {
-        component: CNavItem,
-        name: 'Search Employee',
-        to: '/resourse/searchEmployee',
-      },
+      },     
     ]
   },
 ];
@@ -143,7 +169,7 @@ const listNav = [
   {
     component: CNavItem,
     name: "Dashboard",
-    to: "/dashboard",
+    to: "/",
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: "info",
@@ -152,7 +178,30 @@ const listNav = [
   },
   {
     component: CNavGroup,
-    name: 'Resourse Management',
+    name: 'Organisation Structure',
+    icon: <FaBusinessTime className="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Branch',
+        to: '/resource/EmployeeForm',
+      },
+      {
+        component: CNavItem,
+        name: 'Department',
+        to: '/resourse/designation',
+      },
+      {
+        component: CNavItem,
+        name: 'Designation',
+        to: '/resourse/department',
+      },
+     
+    ]
+  },
+  {
+    component: CNavGroup,
+    name: 'Employee Management',
     icon: <FaUsers className="nav-icon" />,
     items: [
       {
@@ -162,19 +211,9 @@ const listNav = [
       },
       {
         component: CNavItem,
-        name: 'Designation',
+        name: 'Searh Employee',
         to: '/resourse/designation',
-      },
-      {
-        component: CNavItem,
-        name: 'Department',
-        to: '/resourse/department',
-      },
-      {
-        component: CNavItem,
-        name: 'Search Employee',
-        to: '/resourse/searchEmployee',
-      },
+      },     
     ]
   },
 ];
